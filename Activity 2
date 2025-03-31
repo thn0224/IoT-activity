@@ -1,0 +1,32 @@
+- Think of other systems you have around you that read data from a sensor and use that to make decisions. One example would be the thermostat on an oven. Can you find more? 
+--> Automatic Streetlights:  – light sensors (photocells) to detect ambient light levels
+                             - when it gets dark, they turn on automatically, and when daylight returns, they turn off
+--> Car Parking Sensors:  – many modern cars use ultrasonic sensors to detect obstacles when parking
+                          - if an object is too close, the system warns the driver with beeps or even applies automatic braking
+--> Motion-Activated Lights: – use motion sensors (like PIR sensors) to detect movement and turn on the lights when someone walks by
+                             - they turn off after a certain period of inactivity
+--> Autonomous Vacuum Cleaners: – use infrared or LiDAR sensors to map a room, detect obstacles, and decide where to clean next
+
+- What other data could help make an Internet connected thermostat smarter?
+--> Smart Window Sensors: window open, the thermostat could detect it and avoid heating or cooling that room unnecessarily
+--> Humidity Levels: help adjust heating/cooling for better comfort; for example:air is very dry in winter, the system could suggest using a humidifier
+--> Geolocation (GPS from Phone): thermostat could detect when you're on your way home and start warming or cooling your house before you arrive
+--> Voice Commands & AI Integration: integrated with voice assistants like Alexa or Google Assistant, users could fine-tune temperatures with simple commands or let AI optimize settings over time
+--> Energy Prices: adjust heating and cooling based on real-time electricity prices, reducing usage when prices are high and increasing efficiency
+
+- Think of other scenarios where privacy is important so processing of data would be better done on the edge rather than in the cloud. As a hint - think about IoT devices with cameras or other imaging devices on them.
+--> Smart Baby Monitors: cameras and audio monitors in nurseries can analyze movement and crying locally, ensuring that sensitive footage of infants isn't stored in the cloud
+--> Smartphones with AI Features: many modern smartphones process images locally (e.g., on-device facial recognition like Apple’s Face ID) to enhance privacy rather than sending biometric data to the cloud
+--> Home Security Cameras: smart cameras can analyze footage locally for motion detection or facial recognition rather than uploading everything to the cloud, reducing privacy risks and avoiding unnecessary data exposure
+--> Industrial IoT in Factories: machines with cameras monitoring production lines can process footage on-site to detect defects or safety issues without sending trade-sensitive images or proprietary manufacturing data to the cloud
+
+- An average PC or Mac has a CPU with multiple cores running at multiple GigaHertz, meaning the clock ticks billions of times a second. Research the clock speed of your computer and compare how many times faster it is than the Wio terminal.
+--> Wio Terminal has a Microchip ATSAMD51 clock speed: 120 MHz (120 million times/ s)
+--> MacBook M1: 3.2 GHz (3,200 MHz)
+--> Comparision: 3200 MHz/ 120 MHz = 26,67 --> 26,7 times faster than WiO-Terminal
+
+- Do a little research: How much RAM and storage does the computer you are using to read this have? How does this compare to a microcontroller?
+--> MacBook 14 Pro: 16 GB RAM (unified memory) and 512 GB (SSD) storage
+--> Arduino Uno: 2 KB of SRAM and 32 KB storage
+--> ESP8266: 80 KB of user-data RAM and 4 MB storage
+--> MacBook Pro's RAM is approximately 8,000 times larger than Arduino Uno's SRAM and storage capacity is about 16 million times greater
