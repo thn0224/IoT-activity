@@ -18,3 +18,23 @@ For each of the areas described below, find one concrete example that's not give
 
 - Infrastructure IoT --> Smart Parking Solutions: Libelium has introduced a Smart Parking solution that allows citizens to detect available parking spots using IoT-enabled sensors, reduces traffic congestion and improves urban mobility
                      --> If you could add IoT devices to measure anything where you live, what would it be? air quality monitoring sensors, helping residents make informed decisions about outdoor activities and supporting initiatives to improve environmental health
+
+List as many IoT devices as you can that are in your home, school or workplace - there may be more than you think!
+--> At Home:
+- Smartphones & Smartwatches – These are IoT devices because they collect sensor data and connect to the cloud
+- Smart Speakers (Alexa, Google Home, Apple HomePod) – Voice-controlled assistants that connect to the internet
+- Smart TVs & Streaming Devices (Chromecast, Apple TV, Fire Stick) – They stream content over WiFi
+- Smart Plugs & Bulbs (Philips Hue, TP-Link, Xiaomi Smart Bulbs) – Control lights and power remotely
+- Smart Thermostats – Control home temperature intelligently (not common in Vietnam but exists in some places)
+- Smart Door Locks – Unlock doors with an app or fingerprint
+- WiFi Routers & Mesh Networks – Many modern routers have IoT features like remote monitoring
+- Security Cameras (Ring, Arlo, Xiaomi, Hikvision, etc.) – Detect motion and record footage
+- Robot Vacuums (Roomba, Xiaomi, Dreame, etc.) – Use sensors to navigate and clean autonomously
+
+--> At VGU:
+- Smart Projectors & Interactive Whiteboards – Used for teaching and collaboration
+- Security Cameras & Motion Sensors – For campus surveillance and security
+- Access Control Systems (RFID Student Cards, Fingerprint Scanners) – Used at entry gates, labs, and libraries
+- Environmental Sensors – Some campuses have smart air quality monitors or temperature sensors
+- Smart Lighting & Energy Management Systems – Automated lighting that saves energy
+- Lab Equipment with IoT Integration – Some science/engineering labs may have IoT-enabled instruments
