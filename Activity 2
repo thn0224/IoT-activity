@@ -34,4 +34,49 @@
 - What programming languages are you familiar with? Are they supported on Linux?
 --> Java, HTML, CSS, JavaScript, PHP; all are supported on Linux
 
+The challenge in the last lesson was to list as many IoT devices as you can that are in your home, school or workplace. For every device in this list, do you think they are built around microcontrollers or single-board computers, or even a mixture of both?
+--> At Home:
+- Smartphones & Smartwatches – SBC
+- Smart Speakers (Alexa, Google Home, Apple HomePod) – SBC
+- Smart TVs & Streaming Devices (Chromecast, Apple TV, Fire Stick) – SBC
+- Smart Plugs & Bulbs (Philips Hue, TP-Link, Xiaomi Smart Bulbs) – MCU
+- Smart Thermostats – MCU
+- Smart Door Locks – MCU
+- WiFi Routers & Mesh Networks – SBC
+- Security Cameras (Ring, Arlo, Xiaomi, Hikvision, etc.) – Mix
+- Robot Vacuums (Roomba, Xiaomi, Dreame, etc.) - Mix
+--> At VGU:
+- Smart Projectors & Interactive Whiteboards – SBC
+- Security Cameras & Motion Sensors – Mix
+- Access Control Systems (RFID Student Cards, Fingerprint Scanners) – MCU
+- Environmental Sensors – MCU
+- Smart Lighting & Energy Management Systems – MCU
+- Lab Equipment with IoT Integration – Mix
 
+This lesson covered microcontrollers and single-board computers. Create a table comparing and contrasting them, and note at least 2 reasons why you would use a microcontroller over a single-board computer, and at least 2 reasons why you would use a single-board computer over a microcontroller.
+
+Comparison of Microcontrollers and Single-Board Computers: 
+
+| Feature           | Microcontrollers (MCUs)                                                            | Single-Board Computers (SBCs)                                                    |
+|-------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| Definition        | A small, low-power computer on a single chip with CPU, RAM, and storage integrated | A complete computer on a single board with CPU, RAM, storage, and I/O interfaces |
+| Operating System  | No OS (bare-metal) or lightweight RTOS                                             | Runs full OS (Linux, Windows IoT, etc.)                                          |
+| Processing Power  | Low power (typically <500 MHz)                                                     | High power (1 GHz+ multi-core CPUs)                                              |
+| Memory (RAM)      | Limited (usually in KB or MB)                                                      | Higher (512MB to several GB)                                                     |
+| Storage           | Flash memory (KB to MB)                                                            | Uses SD card, eMMC, or SSD (GB to TB)                                            |
+| Power Consumption | Very low (can run on batteries for years)                                          | Higher (requires external power supply)                                          |
+| Connectivity      | Often lacks built-in networking, may use external modules                          | Built-in WiFi, Bluetooth, Ethernet, USB                                          |
+| Use Case          | Simple, real-time control tasks (e.g., turning on LEDs, reading sensors)           | Complex applications like AI, multimedia, and general computing                  |
+| Examples          | Arduino, ESP32, STM32, ATmega328                                                   | Raspberry Pi, Jetson Nano, BeagleBone                                            |
+
+Reasons to Use a Microcontroller (MCU):
+1. Ultra-low power consumption – Can run on small batteries for months or years 
+2. Real-time performance – Better for time-sensitive tasks like motor control or sensor monitoring
+3. Lower cost – Typically cheaper than SBCs, making them ideal for simple applications
+4. Instant startup – No need to boot an OS; executes code immediately when powered
+
+Reasons to Use a Single-Board Computer (SBC):  
+1. More computing power – Suitable for AI, image processing, and multitasking applications 
+2. Runs a full OS – Can execute multiple processes, connect to networks, and use software like Python or databases
+3. Better connectivity – Has built-in WiFi, Bluetooth, Ethernet, and USB support
+4. Easier software development – Supports high-level programming languages and development tools
