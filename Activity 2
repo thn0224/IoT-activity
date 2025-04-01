@@ -30,3 +30,8 @@
 --> Arduino Uno: 2 KB of SRAM and 32 KB storage
 --> ESP8266: 80 KB of user-data RAM and 4 MB storage
 --> MacBook Pro's RAM is approximately 8,000 times larger than Arduino Uno's SRAM and storage capacity is about 16 million times greater
+
+- What programming languages are you familiar with? Are they supported on Linux?
+--> Java, HTML, CSS, JavaScript, PHP; all are supported on Linux
+
+
