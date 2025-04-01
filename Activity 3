@@ -1,0 +1,62 @@
+Do some research. What sensors does your phone have?
+- Iphone 13: Face-ID Sensor, Barometer, Three-Axis-Gyroscope, Accelerometer, Proximity Sensor, Ambient Light Sensor, Digital Compass, Cameras, Button, Microphone
+
+What do you think happens if the sensor returns a higher voltage than was sent (for example coming from an external power supply)?
+- damage to the sensor or circuitry
+- incorrect sensor readings or malfunctions
+- potential damage to the power supply
+- risk of short circuits
+- protection mechanisms (if present)
+
+Do some research. What actuators does your phone have?
+- Taptic Engine (Vibration Motor), Speakers, OLED Display, Camera Actuators, Face ID and TrueDepth Camera System, Flash (LED Flash), MagSafe System (Magnetic Actuators), Haptic Feedback (via Touchscreen), Vibration Alert for Calls or Notifications,
+Vibration for Wake-Up and Lock, Volume Buttons, Side Button (Power Button)
+
+What do you think happens if the IoT device sends a higher voltage than the actuator can handle?
+- damage to the actuator
+- malfunction or erratic behavior
+- fire hazard or short circuits
+- power supply instability
+- protection mechanisms (if present)
+
+How would you keep the motor rotation smooth, especially at low speeds? Would you use a small number of long pulses with long pauses or lots of very short pulses with very short pauses?
+- low speeds, using a series of short pulses with short pauses (high-frequency PWM) --> smoother motion allows the motor to receive constant power in small amounts, keeping the motor from "sticking" or jerking between states
+
+What other simple 2-state actuators can you think of? One example is a solenoid, which is an electromagnet that can be activated to do things like move a door bolt locking/unlocking a door.
+- Buzzers (Piezoelectric or Electromagnetic): buzzer emits sound when activated by a digital HIGH signal and stays silent when LOW
+- Motors (On/Off Control): motors can have variable speed control, a simple digital actuator version would just turn ON (spin) or OFF (stop)
+- Heating Elements (Binary Operation): some heating elements operate in a simple ON/OFF manner, activating when a current is applied and stopping when it's removed
+- Relays: relay is an electrically controlled switch that toggles between ON and OFF states
+
+Assignement:
+Researching Sensors and Actuators
+
+- Sensor: DHT22 Temperature and Humidity Sensor
+--> What it does:
+The DHT22 is a sensor that measures temperature and humidity in the surrounding environment and sends the data to a microcontroller for processing. 
+It is commonly used in weather monitoring, home automation, and greenhouse control systems.
+--> Electronics/Hardware used inside:
+- Thermistor: Measures temperature based on resistance changes due to heat
+- Capacitive Humidity Sensor: Detects changes in capacitance due to moisture levels in the air
+- Microcontroller: Processes raw sensor data and sends it to the IoT device
+--> Analog or Digital:
+- Digital – Uses a one-wire digital interface to transmit data in a processed format
+--> Units and Range of Measurements:
+- Temperature: -40°C to 80°C (Accuracy: ±0.5°C)
+- Humidity: 0% to 100% RH (Accuracy: ±2–5%)
+
+Actuator: SG90 Servo Motor
+--> What it does:
+The SG90 is a servo motor that provides precise angular movement. It is used in applications like robotic arms, RC vehicles, and automation systems.
+--> Electronics/Hardware used inside:
+- DC Motor: Provides movement
+- Gear System: Reduces speed and increases torque
+- Potentiometer: Provides position feedback
+- Control Circuit: Interprets PWM signals to control motor position
+--> Analog or Digital:
+- Digital – Controlled using PWM (Pulse Width Modulation) signals from a microcontroller
+--> Units and Range of Movements:
+- Rotation Range: 0° to 180° (Some servo motors support continuous rotation)
+- Operating Voltage: 4.8V to 6V
+- Torque: ~1.8 kg/cm at 4.8V
+
