@@ -1,0 +1,93 @@
+Soil Moisture vs Pumping Time Table:
+
+| Pump Time (s) | Soil Moisture | Decrease from previous |
+|---------------|----------------|-------------------------|
+| 0 (dry)       | 547            | –                       |
+| 2             | 726            | -179 *(Moisture ↑)*     |
+| 4             | 754            | -28  *(Moisture ↑)*     |
+| 6             | 719            | 35                      |
+| 8             | 586            | 133                     |
+| –             | 187            | 399                     |
+| –             | 116            | 71                      |
+| –             | 66             | 50                      |
+| –             | 32             | 34                      |
+| –             | 11             | 21                      |
+| –             | 5              | 6                       |
+| –             | 2              | 3                       |
+| –             | 0              | 2                       |
+
+Average Decrease Calculation:
+
+- Decrease 1: From 547 to 726 = 179
+- Decrease 2: From 754 to 719 = 35
+- Decrease 3: From 719 to 586 = 133
+- Decrease 4: From 586 to 187 = 399
+- Decrease 5: From 187 to 116 = 71
+- Decrease 6: From 116 to 66 = 50
+- Decrease 7: From 66 to 32 = 34
+- Decrease 8: From 32 to 11 = 21
+- Decrease 9: From 11 to 5 = 6
+- Decrease 10: From 5 to 2 = 3
+- Decrease 11: From 2 to 0 = 2
+
+Total Decrease = 179 + 35 + 133 + 399 + 71 + 50 + 34 + 21 + 6 + 3 + 2 = 933
+Total Pump Time = 22 seconds
+Average Decrease per Second = 933 ÷ 22 = 42.41
+
+Updated code for pump duration:
+// Pin Assignment
+const int sensorPin = A0;       // Potentiometer simulates the Soil Moisture Sensor
+const int relayPin = 7;         // SPDT Relay IN Pin
+const int pumpLedPin = 8;       // LED as Pump
+
+// Threshold – the higher the value, the drier the soil
+const int moistureThreshold = 500;
+
+// Calculated average decrease in soil moisture per second (from previous example)
+const float averageDecreasePerSecond = 42.41;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(relayPin, OUTPUT);
+  pinMode(pumpLedPin, OUTPUT);
+  digitalWrite(relayPin, LOW);
+  digitalWrite(pumpLedPin, LOW);
+}
+
+void loop() {
+  int moisture = analogRead(sensorPin);
+
+  Serial.print("Soil moisture: ");
+  Serial.println(moisture);
+
+  // Check if the soil is dry and the pump needs to run
+  if (moisture > moistureThreshold) {
+    Serial.println("Soil is dry. Pump ON!");
+
+    // Calculate the required pump time to reach the target moisture level
+    int targetMoisture = 300; // Example target moisture level (can be adjusted)
+    int difference = moisture - targetMoisture;
+    
+    // Calculate the pump duration based on the average decrease per second
+    int pumpDuration = difference / averageDecreasePerSecond;
+    if (pumpDuration < 0) {
+      pumpDuration = 0; // Ensure the pump duration is not negative
+    }
+
+    Serial.print("Required pump duration: ");
+    Serial.print(pumpDuration);
+    Serial.println(" seconds");
+
+    // Run the pump for the calculated duration
+    digitalWrite(relayPin, HIGH);     // Turn relay ON
+    digitalWrite(pumpLedPin, HIGH);   // Turn LED ON
+    delay(pumpDuration * 1000);       // Convert seconds to milliseconds
+
+    digitalWrite(relayPin, LOW);      // Turn relay OFF
+    digitalWrite(pumpLedPin, LOW);    // Turn LED OFF
+  } else {
+    Serial.println("Soil is moist enough.");
+  }
+
+  delay(1000); // Wait time until next reading
+}
